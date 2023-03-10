@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Roboto+Slab&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1976D2;
+    align-items: center;
+    height: 75px;
+    color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo {
+    font-size: 30px;
+    font-family: 'Rampart One', cursive;    
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    width: 75%;
 }
 
-.App-link {
-  color: #61dafb;
+.home,
+.skills,
+.contact,
+.about,
+.signup {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-family: 'Rampart One', cursive;  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home:hover,
+.skills:hover,
+.contact:hover,
+.about:hover,
+.signup:hover{
+    transform: scale(1.1);
+}
+
+.signup {
+    border: 1px solid #81D4FA;
+    border-radius: 10px;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+@media screen and (max-width:780px) {
+    .logo {
+        font-size: 25px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links-mobile {
+        position: absolute;
+        display: block;
+        list-style: none;
+        background-color: #1976D2;
+        left: 0;
+        top: 15px;
+        transition: all 0.5s ease-out;
+        width: 100%;
+    }
+
+    .home,
+    .skills,
+    .contact,
+    .about,
+    .signup {
+        color: white;
+        text-align: center;
+        width: 100%;
+        padding: 32px;
+        transition: all 0.5 ease;
+    }
+
+    .signup {
+        border: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        color: white;
+        border: none;
+        background-color: #1976D2;
+        outline: none;
+        top: 15px;
+        right: 25px;
+    }
 }
